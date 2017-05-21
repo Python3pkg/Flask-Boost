@@ -107,7 +107,7 @@ def register_jinja(app):
         """Generate url for pagination."""
         view_args = request.view_args.copy()
         args = request.args.copy().to_dict()
-        combined_args = dict(view_args.items() + args.items())
+        combined_args = dict(list(view_args.items()) + list(args.items()))
         combined_args['page'] = page
         return url_for(request.endpoint, **combined_args)
 

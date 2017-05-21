@@ -30,9 +30,9 @@ def live():
 
     server = Server(app)
 
-    map(server.watch, glob2.glob("application/pages/**/*.*"))  # pages
-    map(server.watch, glob2.glob("application/macros/**/*.html"))  # macros
-    map(server.watch, glob2.glob("application/static/**/*.*"))  # public assets
+    list(map(server.watch, glob2.glob("application/pages/**/*.*")))  # pages
+    list(map(server.watch, glob2.glob("application/macros/**/*.html")))  # macros
+    list(map(server.watch, glob2.glob("application/static/**/*.*")))  # public assets
 
     server.serve(port=PORT)
 

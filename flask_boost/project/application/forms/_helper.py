@@ -1,6 +1,6 @@
 # coding: utf-8
 import re
-from urlparse import urlparse
+from urllib.parse import urlparse
 
 
 def check_url(form, field):
